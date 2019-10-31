@@ -1,4 +1,4 @@
-# SWT2 2019/20 - Introductory Exercise
+# SWT2 2019/20 - Introductory Exercise [![Build Status](https://travis-ci.com/swt2-intro-exercise/rails-exercise-19-benrobby.svg?branch=master)](https://travis-ci.com/swt2-intro-exercise/rails-exercise-19-benrobby)
 
 This is an interactive [Ruby on Rails 5](https://guides.rubyonrails.org/v5.2/) exercise aimed introducing the basics of web development, used in the course [SWTII](https://hpi.de/plattner/teaching/winter-term-201920/softwaretechnik-ii.html). It is based partly on the offical ["Getting Started with Rails"](https://guides.rubyonrails.org/v5.2/getting_started.html) guide, so in case of getting stuck, that might be a good start to find solutions. The interactivity of this exercise is provided by opening issues in the GitHub issue tracker (through automation in a [CI server](https://en.wikipedia.org/wiki/Continuous_integration#Rationale)). The tickets contain the currently failing test case and the corresponding error message as well as instructions on what tasks to tackle next.
 
