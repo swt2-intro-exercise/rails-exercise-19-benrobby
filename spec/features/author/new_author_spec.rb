@@ -24,4 +24,13 @@ describe 'New author page', type: :feature do
     find('input[type="submit"]').click
   end
 
+  it 'should show error when the last name is empty' do
+    visit new_author_path
+    page.fill_in 'author[first_name]', with: 'Alan'
+    page.fill_in 'author[homepage]', with: 'turing.com'
+
+    find('input[type="submit"]').click
+    expect(page).to have_text('error')
+  end
+
 end
