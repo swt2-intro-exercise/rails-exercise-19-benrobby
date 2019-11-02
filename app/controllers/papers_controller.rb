@@ -1,5 +1,5 @@
 class PapersController < ApplicationController
-  before_action :set_paper, only: [:show, :edit, :update, :destroy]
+  before_action :set_paper, only: %i[show edit update destroy]
 
   # GET /papers
   def index
@@ -7,8 +7,7 @@ class PapersController < ApplicationController
   end
 
   # GET /papers/1
-  def show
-  end
+  def show; end
 
   # GET /papers/new
   def new
@@ -16,8 +15,7 @@ class PapersController < ApplicationController
   end
 
   # GET /papers/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /papers
   def create
@@ -46,13 +44,14 @@ class PapersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_paper
-      @paper = Paper.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def paper_params
-      params.require(:paper).permit(:title, :venue, :year)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_paper
+    @paper = Paper.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def paper_params
+    params.require(:paper).permit(:title, :venue, :year, author_ids: [])
+  end
 end
